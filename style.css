@@ -1,0 +1,98 @@
+/* i have used two google fonts Poppins and Happy Monkey, which are attached in Html head */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: url(./assets/background.jpg) center center no-repeat;
+  height: 100vh;
+  color: #f3f4f6;
+}
+
+/* css for stopwatch heading */
+.watch-head {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  font-size: 50px;
+  font-family: "Happy Monkey", sans-serif;
+  color: rgba(7, 16, 19, 0.7);
+  font-weight: 700;
+}
+
+/* outer container css */
+.stopwatch-container {
+  position: relative;
+  text-align: center;
+
+  width: 100%;
+  height: 420px;
+  max-width: 420px;
+
+  margin: 4rem auto;
+  padding: 1rem 2rem;
+  border-radius: 50%;
+  border: 10px solid rgba(7, 16, 19, 0.7);
+}
+
+.inner-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.time-display {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  background-color: rgba(7, 16, 19, 0.7);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+/* button container css */
+.watch-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* common button css */
+.watch-buttons button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #071013;
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.4s ease-in-out;
+}
+.watch-buttons button:hover {
+  opacity: 0.7;
+}
+.watch-buttons button:active {
+  opacity: 1.5;
+}
+
+/* button separate styling css */
+
+#start-btn {
+  background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+}
+#stop-btn {
+  background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
+}
+#reset-btn {
+  background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+}
