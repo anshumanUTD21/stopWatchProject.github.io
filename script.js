@@ -40,7 +40,9 @@ function start() {
   if (intervalId) {
     return;
   }
-
+  if (startBtnEl.innerText === "RESUME") {
+    startBtnEl.innerText = "START";
+  }
   intervalId = setInterval(updateTime, 1000);
 }
 
@@ -48,12 +50,16 @@ function start() {
 function stop() {
   stopAudio.play();
   clearInterval(intervalId);
+  startBtnEl.innerText = "RESUME";
   intervalId = null;
 }
 
 //reset button functionality
 function reset() {
   stop();
+  if (startBtnEl.innerText === "RESUME") {
+    startBtnEl.innerText = "START";
+  }
   seconds = 0;
   timeEl.innerText = "00:00:00";
 }
